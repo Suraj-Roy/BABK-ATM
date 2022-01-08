@@ -1,0 +1,42 @@
+{% extends 'bank/base.html' %}
+
+{% block body %}
+
+<div class="container-fluid">
+
+
+    <div class="container my-4">
+
+        <div class="col-lg-10 mx-auto border rounded p-4">
+            {% for message in messages %}
+            
+            <div class="alert alert-info border rounded text-center" role="alert">
+              {{message}}
+            </div>
+          {% endfor %}
+          <div class="text-center p-3 font-weight-bold" style="font-size:4vh;">Welcome to XYZ Bank Atm</div>
+          <hr>
+          <div class="row">
+            <a href="{% url 'validation' 'balance' %}" class="nav-link btn btn-outline-success col-sm-4  my-2">Balance</a>
+          <div class="col-sm-4"></div>
+          <a href="{% url 'validation' 'withdrawl' %}" class="nav-link btn btn-outline-success col-sm-4  my-2">Withdrawl</a>
+        </div>
+
+        <div class="row">
+          <a href="{% url 'validation' 'deposit' %}" class="nav-link btn btn-outline-success col-sm-4  my-2">Deposit</a>
+          <div class="col-sm-4"></div>
+          <a href="{% url 'Forget-Pin' %}" class="nav-link btn btn-outline-success col-sm-4 float-right my-2">Reset Pin</a>
+        </div>
+        <div class="row">
+          
+          <a href="{% url 'atm' %}" class="nav-link btn btn-outline-success col-sm-4 float-right my-2">Cancel</a>
+          <div class="col-sm-4"></div>
+          <a href="{% url 'home' %}" class="nav-link btn btn-outline-success col-sm-4 float-right my-2">Exit</a>
+        </div>
+        </div>
+    </div>
+
+
+</div>
+
+{% endblock body %}

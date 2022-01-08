@@ -1,0 +1,58 @@
+
+{% extends 'bank/base.html' %}
+{% block body %}
+{% include 'bank/nav.html' %}
+
+<div class="container-fluid">
+
+<div class="container my-4">
+
+  <div class="col-lg-5 mx-auto border rounded p-4">
+    {% for message in messages %}
+    
+    <div class="alert alert-danger" role="alert">
+      {{message}}
+    </div>
+    
+
+    {% endfor %}
+  
+  <h3 class="alert alert-light border rounded text-center">Login</h3>
+  <hr>
+  
+  <form action="" method="post">
+          {% csrf_token %}
+          
+                <div class="form-group">
+                    <label class="required" for="">Email</label>
+                    <input required type="email" name="email" id=""
+                    value="" 
+                    class=" form-control-sm form-control" placeholder="Please Enter Email">
+                </div>
+
+
+                <!-- password -->
+                <div class="form-group">
+                    <label class="required" for="">Password</label>
+                    <input type="password" 
+                    name="password" 
+                    id=""
+                    value="" 
+                     class="form-control form-control-sm" placeholder="Please Enter Password">
+                </div>
+
+                <hr>
+                <div class="my-2">
+                <a href="{% url 'forget_password' %}" >forgot password?</a>
+              </div>
+                  <input class="btn btn-outline-dark btn-md px-5 col-md-12" type="submit" value="Login">
+                
+
+       
+  
+</form>
+</div>
+</div>
+</div>
+{% include 'bank/footer.html' %}
+{% endblock body %}

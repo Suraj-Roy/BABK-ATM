@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background: linear-gradient(to right, #FC466B , #3F5EFB);">
+    <a class="navbar-brand " style="font-family: cursive" href="#"><b class="text-white">XYZ Bank</b></a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+     <div class="container">
+         <div class="mx-auto">
+             
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        
+        
+        
+        
+          {% if user.is_authenticated %}
+            <li class="nav-item active bx">
+            <a class="nav-link font-weight-bold mx-2" href="{% url 'logout' %}">Logout</a>
+            </li>
+
+          {% else %}
+          <li class="nav-item active bx">
+            <a class="nav-link font-weight-bold mx-2" href="{% url 'login' %}">Login</a>
+          </li>
+
+          <li class="nav-item active bx">
+            <a class="nav-link font-weight-bold mx-2" href="{% url 'signup' %}">Sign Up</a>
+          </li>
+
+          <li class="nav-item active bx">
+            <a class="nav-link font-weight-bold mx-2" href="{% url 'atm' %}">ATM</a>
+          </li>
+          {% endif %}
+      </ul>
+    </div>
+    </div>
+    </div>
+  </nav>

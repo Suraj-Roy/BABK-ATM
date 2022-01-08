@@ -1,0 +1,41 @@
+
+{% extends 'bank/base.html' %}
+{% block body %}
+{% include 'bank/nav.html' %}
+
+<div class="container my-4">
+<h3 class="text-center ">Welcome to XYZ Bank {{atm.user.first_name}}. </h3>
+<h3 class="text-center ">Your Atm card is Ready</h3>
+</div>
+<div class="container my-4 ">
+
+  <div class="col-lg-5 mx-auto border rounded p-4 shadow-lg" style="background: linear-gradient(to right, #ad5389 , #3c1053);">
+    
+    <h4 class="text-center text-white"> <span class="">XYZ Bank ATM Card</span></h4>
+    
+    
+    <h5 class="text-center text-white"><span class="">card no: <b>{{atm.cardno}}</span></b></h5>
+
+    <h5 class="text-white"><span class="">pin no: <b>{{atm.pinno}}</b></span></h5>
+    
+    <h6 class="text-white"><span class="">Card Holder Name: {{atm.user.first_name}} {{atm.user.last_name}}</span></h6>
+
+    
+
+</div>
+</div>
+
+
+{% endblock body %}
+
+{% block footer %}
+<footer class="bg-dark mt-4 fixed-bottom" style="background: linear-gradient(to right, #FC466B , #3F5EFB);">
+
+  <div class="text-white text-center py-3">© 2021 Copyright:
+      <span style="font-family: cursive">Suraj Kumar</span>
+    </div>
+
+
+</footer>
+
+{% endblock footer %}

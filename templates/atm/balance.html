@@ -1,0 +1,29 @@
+{% extends 'bank/base.html' %}
+
+{% block body %}
+
+<div class="container-fluid">
+
+
+    <div class="container my-4">
+
+        <div class="col-lg-10 mx-auto border rounded p-4">
+          <div class="text-center p-3 font-weight-bolder" style="font-size:4vh;font-family: cursive;"> Hello {{fn}}</div>
+          <div class="text-center p-3 font-weight-bolder" style="font-size:4vh;font-family: cursive;">This is your account balance.</div>
+          <h5 class="text-center">Rs.{{balance.Account_balance}}</h5>
+          <hr>
+          
+
+          <div class="row">
+            
+            <a href="{% url 'atm' %}" class="nav-link btn btn-outline-success col-sm-4  mx-auto my-2">Cancel</a>
+            <a href="{% url 'home' %}" class="nav-link btn btn-outline-success col-sm-4 mx-auto my-2">Exit</a>
+          </div>
+        </div>
+        </div>
+    </div>
+
+
+</div>
+
+{% endblock body %}
