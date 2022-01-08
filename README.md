@@ -1,4 +1,4 @@
 # Virtuall-BANK-ATM
-This is virtuall bank/atm
+This is virtual bank/atm
 
 https://virtually-banking.herokuapp.com/
